@@ -19,7 +19,6 @@ function App() {
     e.preventDefault()
     setPrime(numeroPrime(number))
     setHasNumber(true)
-    setNumber('')
   }
 
   return (
