@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   const [number, setNumber] = useState('')
   const [newNum, setNewNum] = useState('')
-  const [hasNumber, setHasNumber] = useState(false)
+
   const [prime, setPrime] = useState(false)
 
   function numeroPrime(num) {
@@ -22,7 +22,6 @@ function App() {
     e.preventDefault()
     setNewNum(number)
     setPrime(numeroPrime(number))
-    setHasNumber(true)
   }
 
   return (
@@ -47,7 +46,7 @@ function App() {
         <div className='results'>
           <h3> Resultado: </h3>
           <p>
-            {hasNumber ? (prime ? `${newNum} é primo ` : 'Não é primo') : '...'}
+            {newNum ? (prime ? `${newNum} é primo ` : 'Não é primo') : '...'}
           </p>
         </div>
       </div>
