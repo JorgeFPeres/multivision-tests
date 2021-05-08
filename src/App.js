@@ -25,7 +25,7 @@ function App() {
     <main>
       <div className='glass'>
         <div className='left-container'>
-          <h2>Insira um número primo</h2>
+          <h2>Insira um número:</h2>
           <form onSubmit={handleSubmit}>
             <div>
               <input
