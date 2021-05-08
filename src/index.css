@@ -129,3 +129,32 @@ h3 {
   padding: 0.5rem;
   border-radius: 2rem;
 }
+
+@media screen and (max-width: 992px) {
+  .glass {
+    flex-direction: column;
+    min-height: 50vh;
+    width: 60%;
+    border-radius: 1rem;
+    backdrop-filter: blur(2rem);
+  }
+  .left-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .circle1 {
+    display: none;
+  }
+  .circle2 {
+    display: none;
+  }
+  .results {
+    border-radius: 1rem;
+  }
+}
