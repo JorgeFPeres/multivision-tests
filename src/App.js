@@ -3,10 +3,13 @@ import './App.css'
 
 function App() {
   const [number, setNumber] = useState('')
+  const [newNum, setNewNum] = useState('')
   const [hasNumber, setHasNumber] = useState(false)
   const [prime, setPrime] = useState(false)
 
   function numeroPrime(num) {
+    if (num <= 1) return false
+    if (num % 2 === 0 && num > 2) return false
     for (let divisor = 2; divisor < num; divisor++) {
       if (num % divisor === 0) {
         return false
@@ -17,6 +20,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setNewNum(number)
     setPrime(numeroPrime(number))
     setHasNumber(true)
   }
@@ -43,7 +47,7 @@ function App() {
         <div className='results'>
           <h3> Resultado: </h3>
           <p>
-            {hasNumber ? (prime ? `É primo ` : 'Não é um número primo') : '...'}
+            {hasNumber ? (prime ? `${newNum} é primo ` : 'Não é primo') : '...'}
           </p>
         </div>
       </div>
